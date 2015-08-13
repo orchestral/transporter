@@ -52,8 +52,10 @@ class Blueprint extends Fluent
     {
         $transport = $this->get('transport');
 
-        $source      = data_get($data, $this->get('key', 'id'));
-        $destination = call_user_func($transport, $data, $this);
+        $source = data_get($data, $this->get('key', 'id'));
+        $result = call_user_func($transport, $data, $this);
+
+        $destination = $this->prepareTransformationAndGetKey($result);
 
         if (is_null($destination)) {
             throw new Exception('[transport] need to return the inserted ID');
@@ -74,5 +76,26 @@ class Blueprint extends Fluent
     public function isValid()
     {
         return is_callable($this->get('transport'));
+    }
+
+    /**
+     * Prepare if result from tranform callback is an Eloquent object, if sp
+     * return the key.
+     *
+     * @param  mixed  $model
+     *
+     * @return mixed
+     */
+    protected function prepareTransformationAndGetKey($model)
+    {
+        if (! $model instanceof Model) {
+            return $model;
+        }
+
+        if ($model->exists == false) {
+            $model->save();
+        }
+
+        return $model->getKey();
     }
 }
