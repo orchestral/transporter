@@ -15,14 +15,10 @@ Schema::table('member', function (Blueprint $blueprint) {
         ->filter(function (Builder $query) {
             $query->where('active', '=', 1);
         })->transport(function ($data) {
-            $user = new User([
+            return new User([
                 'email' => $data->u_email,
                 'password' => $data->u_password,
             ]);
-
-            $user->save();
-
-            return $user->getKey();
         });
 })->start();
 ```
