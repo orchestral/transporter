@@ -25,14 +25,14 @@ class Schema
     }
 
     /**
-     * Create migration schema.
+     * Create a new migration transport schema.
      *
      * @param  string  $table
      * @param  \Closure  $callback
      *
      * @return \Orchestra\Transporter\Generator
      */
-    public static function create($table, Closure $callback)
+    public static function transport($table, Closure $callback)
     {
         $blueprint = new Blueprint([
             'connection' => static::$connection,
