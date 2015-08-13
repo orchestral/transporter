@@ -24,5 +24,5 @@ Schema::transport('member', function (Blueprint $blueprint) {
 
             return $user->getKey();
         });
-});
+})->start();
 ```

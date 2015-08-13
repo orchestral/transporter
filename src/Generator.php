@@ -44,4 +44,14 @@ class Generator
             }
         });
     }
+
+    /**
+     * Start building the schema.
+     *
+     * @return void
+     */
+    public function start()
+    {
+        return $this->migrate();
+    }
 }
