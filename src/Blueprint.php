@@ -27,9 +27,9 @@ class Blueprint extends Fluent
      * Get migrated table key.
      *
      * @param  string  $table
-     * @param  mixed  $id
+     * @param  int  $id
      *
-     * @return mixed
+     * @return int
      */
     public function getMigratedKey($table, $id)
     {
