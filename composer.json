@@ -1,0 +1,25 @@
+{
+    "name": "orchestra/transporter",
+    "keywords": ["orchestra-platform", "orchestral", "laravel", "migration"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Transporter\\": "src/"
+        }
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.*",
+        "illuminate/database": "~5.1"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "~5.1"
+    }
+}
