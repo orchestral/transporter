@@ -11,11 +11,23 @@ class Generator
      */
     protected $blueprint;
 
+    /**
+     * Construct a new generator.
+     *
+     * @param  \Orchestra\Transporter\Blueprint  $blueprint
+     */
     public function __construct(Blueprint $blueprint)
     {
         $this->blueprint = $blueprint;
     }
 
+    /**
+     * Migrate by chunk.
+     *
+     * @param  int  $chunk
+     *
+     * @return void
+     */
     public function migrate($chunk = 200)
     {
         $blueprint = $this->blueprint;

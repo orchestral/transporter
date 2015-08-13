@@ -24,6 +24,24 @@ class Blueprint extends Fluent
     }
 
     /**
+     * Get migrated table key.
+     *
+     * @param  string  $table
+     * @param  mixed  $id
+     *
+     * @return mixed
+     */
+    public function getMigratedKey($table, $id)
+    {
+        $result = DB::table('transport_migrations')
+                    ->where('name', '=', $table)
+                    ->where('source_id', '=', $id)
+                    ->first();
+
+        return data_get($result, 'destination_id', $id);
+    }
+
+    /**
      * Migrate data.
      *
      * @param  mixed $data
@@ -38,7 +56,7 @@ class Blueprint extends Fluent
         $destination = call_user_func($transport, $data, $this);
 
         if (is_null($destination)) {
-            throw new Exception("[transport] need to return the inserted ID");
+            throw new Exception('[transport] need to return the inserted ID');
         }
 
         DB::table('transport_migrations')->insert([
