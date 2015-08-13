@@ -1,6 +1,7 @@
 <?php namespace Orchestra\Transporter;
 
 use RuntimeException;
+use Illuminate\Database\Eloquent\Model;
 
 class Generator
 {
@@ -38,11 +39,15 @@ class Generator
 
         $query = $blueprint->getQueryBuilder();
 
+        Model::unguard();
+
         $query->chunk($chunk, function ($collection) use ($blueprint) {
             foreach ($collection as $data) {
                 $blueprint->migrate($data);
             }
         });
+
+        Model::reguard();
     }
 
     /**
