@@ -32,7 +32,7 @@ class Schema
      *
      * @return \Orchestra\Transporter\Generator
      */
-    public static function transport($table, Closure $callback)
+    public static function table($table, Closure $callback)
     {
         $blueprint = new Blueprint([
             'connection' => static::$connection,
