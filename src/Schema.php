@@ -42,6 +42,8 @@ class Schema
             'transport'  => null,
         ]);
 
+        $callback($blueprint);
+
         return new Generator($blueprint);
     }
 }
