@@ -22,3 +22,35 @@ Schema::table('member', function (Blueprint $blueprint) {
         });
 })->start();
 ```
+
+## Version Compatibility
+
+Laravel  | Transporter
+:--------|:---------
+ 5.1.x   | 3.1.x@dev
+
+## Installation
+
+To install through composer, simply put the following in your `composer.json` file:
+
+```json
+{
+    "require": {
+        "orchestra/transporter": "~3.1"
+    }
+}
+```
+
+And then run `composer install` to fetch the package.
+
+### Quick Installation
+
+You could also simplify the above code by using the following command:
+
+    composer require "orchestra/transporter=~3.1"
+
+### Setup
+
+For simplicity, Transporter Component doesn't include any service provider. You can simply run the migration via:
+
+    php artisan migrate --path=vendor/orchestra/transporter/resources/database/migrations
