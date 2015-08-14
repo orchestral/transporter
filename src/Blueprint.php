@@ -33,7 +33,7 @@ class Blueprint extends Fluent
      */
     public function getMigratedKey($table, $id)
     {
-        $result = DB::table('transporter_migrations')
+        $result = DB::table('orchestra_transporter')
                     ->where('name', '=', $table)
                     ->where('source_id', '=', $id)
                     ->first();
@@ -61,7 +61,7 @@ class Blueprint extends Fluent
             throw new Exception('[transport] need to return the inserted ID');
         }
 
-        DB::table('transporter_migrations')->insert([
+        DB::table('orchestra_transporter')->insert([
             'name'           => $this->get('table'),
             'source_id'      => $source,
             'destination_id' => $destination,

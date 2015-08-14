@@ -13,7 +13,7 @@ class OrchestraTransporterCreateMigrationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('transporter_migrations', function (Blueprint $table) {
+        Schema::create('orchestra_transporter', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             $table->string('name');
@@ -31,6 +31,6 @@ class OrchestraTransporterCreateMigrationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('transporter_migrations');
+        Schema::drop('orchestra_transporter');
     }
 }
