@@ -62,7 +62,7 @@ class Blueprint extends Fluent
         }
 
         DB::table('transport_migrations')->insert([
-            'name'        => $table,
+            'name'        => $this->get('table'),
             'source_id'   => $source,
             'destination' => $destination,
         ]);
