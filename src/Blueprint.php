@@ -3,6 +3,7 @@
 use Exception;
 use Illuminate\Support\Fluent;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Model;
 
 class Blueprint extends Fluent
 {
