@@ -27,6 +27,21 @@ class Blueprint extends Fluent
     }
 
     /**
+     * Get last migrated.
+     *
+     * @return object|null
+     */
+    public function getLastMigrated()
+    {
+        $result = DB::table('orchestra_transporter')
+                    ->where('name', '=', $this->get('table'))
+                    ->orderBy('source_id', 'desc')
+                    ->first();
+
+        return $result;
+    }
+
+    /**
      * Get migrated table key.
      *
      * @param  string  $table
