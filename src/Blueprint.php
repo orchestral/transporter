@@ -62,11 +62,7 @@ class Blueprint extends Fluent
             throw new Exception('[transport] need to return the inserted ID');
         }
 
-        DB::table('orchestra_transporter')->insert([
-            'name'           => $this->get('table'),
-            'source_id'      => $source,
-            'destination_id' => $destination,
-        ]);
+        $this->runCreateHook($source, $destination);
     }
 
     /**
@@ -98,5 +94,27 @@ class Blueprint extends Fluent
         }
 
         return $model->getKey();
+    }
+
+    /**
+     * Run post create hook.
+     *
+     * @param  mixed  $source
+     * @param  mixed  $destination
+     * @return void
+     */
+    protected function runCreateHook($source, $destination)
+    {
+        DB::table('orchestra_transporter')->insert([
+            'name'           => $this->get('table'),
+            'source_id'      => $source,
+            'destination_id' => $destination,
+        ]);
+
+        $listen = $this->get('listen');
+
+        if (is_callable($listen)) {
+            call_user_func($listen, $this, $source, $destination);
+        }
     }
 }

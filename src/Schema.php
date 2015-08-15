@@ -40,6 +40,7 @@ class Schema
             'key'        => 'id',
             'filter'     => null,
             'transport'  => null,
+            'listen'     => null,
         ]);
 
         $callback($blueprint);
