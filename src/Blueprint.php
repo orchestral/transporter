@@ -21,6 +21,8 @@ class Blueprint extends Fluent
             call_user_func($filter, $query, $this);
         }
 
+        $query->orderBy($this->get('key'));
+
         return $query;
     }
 
