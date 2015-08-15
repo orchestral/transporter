@@ -1,5 +1,6 @@
 {
     "name": "orchestra/transporter",
+    "description": "Migration Toolkit: Creating ORM Compatible Structure from Legacy Database",
     "keywords": ["orchestra-platform", "orchestral", "laravel", "migration"],
     "license": "MIT",
     "authors": [

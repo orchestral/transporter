@@ -1,4 +1,4 @@
-Migration Transporter
+Migration Toolkit: Creating ORM Compatible Structure from Legacy Database
 =====================
 
 Have you ever taken a project that had a messy, unstructured database design? Have you ever wish you can transform those project to become more Eloquent friendly?
