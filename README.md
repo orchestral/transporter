@@ -23,6 +23,9 @@ Schema::table('member', function (Blueprint $blueprint) {
 })->start();
 ```
 
+* [Version Compatibility](#version-compatibility)
+* [Installation](#installation)
+
 ## Version Compatibility
 
 Laravel  | Transporter
@@ -54,3 +57,4 @@ You could also simplify the above code by using the following command:
 For simplicity, Transporter Component doesn't include any service provider. You can simply run the migration via:
 
     php artisan migrate --path=vendor/orchestra/transporter/resources/database/migrations
+
