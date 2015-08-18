@@ -6,9 +6,9 @@ Have you ever taken a project that had a messy, unstructured database design? Ha
 [![Latest Stable Version](https://img.shields.io/github/release/orchestral/transporter.svg?style=flat-square)](https://packagist.org/packages/orchestra/transporter)
 [![Total Downloads](https://img.shields.io/packagist/dt/orchestra/transporter.svg?style=flat-square)](https://packagist.org/packages/orchestra/transporter)
 [![MIT License](https://img.shields.io/packagist/l/orchestra/transporter.svg?style=flat-square)](https://packagist.org/packages/orchestra/transporter)
-[![Build Status](https://img.shields.io/travis/orchestral/transporter/3.1.svg?style=flat-square)](https://travis-ci.org/orchestral/transporter)
-[![Coverage Status](https://img.shields.io/coveralls/orchestral/transporter/3.1.svg?style=flat-square)](https://coveralls.io/r/orchestral/transporter?branch=3.1)
-[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/transporter/3.1.svg?style=flat-square)](https://scrutinizer-ci.com/g/orchestral/transporter/)
+[![Build Status](https://img.shields.io/travis/orchestral/transporter/master.svg?style=flat-square)](https://travis-ci.org/orchestral/transporter)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/transporter/master.svg?style=flat-square)](https://coveralls.io/r/orchestral/transporter?branch=master)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/transporter/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/orchestral/transporter/)
 
 ```php
 use App\User;
@@ -38,6 +38,7 @@ Schema::table('member', function (Blueprint $blueprint) {
 Laravel  | Transporter
 :--------|:---------
  5.1.x   | 3.1.x@dev
+ 5.2.x   | 5.2.x@dev
 
 ## Installation
 
