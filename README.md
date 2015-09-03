@@ -1,6 +1,8 @@
 Migration Toolkit: Creating ORM Compatible Structure from Legacy Database
 =====================
 
+[![Join the chat at https://gitter.im/orchestral/platform/components](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/orchestral/platform/components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Have you ever taken a project that had a messy, unstructured database design? Have you ever wish you can transform those project to become more Eloquent friendly?
 
 [![Latest Stable Version](https://img.shields.io/github/release/orchestral/transporter.svg?style=flat-square)](https://packagist.org/packages/orchestra/transporter)
