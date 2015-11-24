@@ -40,7 +40,7 @@ Schema::table('member', function (Blueprint $blueprint) {
 Laravel  | Transporter
 :--------|:---------
  5.1.x   | 3.1.x
- 5.2.x   | 5.2.x@dev
+ 5.2.x   | 3.2.x
 
 ## Installation
 

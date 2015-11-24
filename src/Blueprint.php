@@ -118,6 +118,7 @@ class Blueprint extends Fluent
      *
      * @param  mixed  $source
      * @param  mixed  $destination
+     *
      * @return void
      */
     protected function runCreateHook($source, $destination)
