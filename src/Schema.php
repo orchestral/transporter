@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Transporter;
+<?php
+
+namespace Orchestra\Transporter;
 
 use Closure;
 
