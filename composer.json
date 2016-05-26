@@ -17,11 +17,11 @@
     },
     "require": {
         "php": ">=5.6.0",
-        "illuminate/support": "~5.2.0"
+        "illuminate/support": "~5.3.0"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",
-        "orchestra/testbench": "~3.2.0"
+        "orchestra/testbench": "~3.3.0"
     },
     "extra": {
         "branch-alias": {
