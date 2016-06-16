@@ -43,11 +43,9 @@ class Generator
 
         Model::unguard();
 
-        $query->chunk($chunk, function ($collection) use ($blueprint) {
-            foreach ($collection as $data) {
-                $blueprint->migrate($data);
-            }
-        });
+        $query->each(function ($data) use ($blueprint) {
+            $blueprint->migrate($data);
+        }, $chunk);
 
         Model::reguard();
     }
